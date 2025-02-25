@@ -1,0 +1,17 @@
+# Installation Data Lake
+
+# Installing and Configuring Hadoop in Slaves
+
+# As root, run the command below on each Slave:
+
+mkdir /opt/hadoop
+cd /opt
+chown -R hadoop:hadoop
+
+
+# Run the command below as hadoop user in Node Master to install Hadoop (copy the files) to slave:
+
+Su - Hadoop
+cd ~
+scp -rv -i "~/.ssh/hdp-key" /opt/hadoop hadoop@hdpslv1:/opt
+scp -rv -i "~/.ssh/hdp-key" /opt/hadoop hadoop@hdpslv2:/opt

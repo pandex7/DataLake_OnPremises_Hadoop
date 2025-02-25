@@ -1,0 +1,31 @@
+## Installation Data Lake
+
+# Installing and Configuring Java JDK (on the 3 cluster servers)
+
+# Access the directory
+cd /opt/
+
+# Installwget
+install wget yum
+
+# Download
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz"
+
+# Unpacks the file
+tar xzf jdk-8u171-linux-x64.tar.gz
+
+# Check the version
+java -version
+
+# Configuring environment variables
+
+I saw .bash_profile
+
+# Java JDK 1.8
+export JAVA_HOME=/opt/jdk
+export JRE_HOME=/opt/jdk/jre
+export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+
+source .bash_profile
+
+java -version

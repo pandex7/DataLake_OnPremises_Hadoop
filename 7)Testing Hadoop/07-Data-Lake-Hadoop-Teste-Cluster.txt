@@ -1,0 +1,54 @@
+# Installation Data Lake
+
+# Installing and Configuring Hadoop
+
+# Access via browser (if you have trouble connecting, check the server firewall: service firewalld status) and stop the service like this:
+
+service firewalld stop
+
+
+# Access to the cluster via browser:
+
+http://192.168.1.76:9870
+http://192.168.1.77:9864
+
+
+# Analyze the cluster:
+
+dfsadmin hdfs -report
+
+
+# Start YARN
+
+$HADOOP_HOME/sbin/start-yarn.sh
+
+
+# Testing the cluster:
+
+wget http://datascienceacademy.com.br/blog/aluno/RFundamentos/Datasets/Parte2/questoes.csv
+
+dfs hdfs -mkdir /datasets
+hdfs dfs -put questoes.csv/datasets
+hdfs dfs
+
+
+# Running mapreduce processing job via YARN (word count in file)
+
+yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.0.jar wordcount "/datasets/questoes.csv" output
+
+
+# Checking job execution:
+
+HDFS DFS -CAT Output/Part-R-00000
+yarn node -list
+yarn application
+
+
+# Access via browser:
+http://192.168.1.76:8088/cluster
+
+
+# Stop the cluster:
+
+$HADOOP_HOME/sbin/stop-yarn.sh
+$HADOOP_HOME/sbin/stop-dfs.sh
