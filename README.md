@@ -1,15 +1,15 @@
-# DataLake-On-Premises
+# Data Lake on-premises com Hadoop
 
-Implementação de um Data Lake On-Premises
+Implementação de um Data Lake on-premises.
 
 
-## About the project
+## Sobre o projeto
 
-Vamos implementar um projeto de um Data Lake no local. Entendendo seu conceito e diferença de um Data Warehouse.
+Implementaremos um Data Lake local, compreendendo seu conceito e suas diferenças em relação a um Data Warehouse.
 
-##Why?
+## Por quê?
 
-por que Data Lake é um conceito, não uma plataforma !!!
+Porque Data Lake é um conceito, não uma plataforma.
 
 - Este projeto faz parte do meu portfólio pessoal, então ficarei feliz se você puder me dar algum feedback sobre o projeto, código, estrutura ou qualquer coisa que você possa relatar que possa me fazer um melhor engenheiro de dados!
 
